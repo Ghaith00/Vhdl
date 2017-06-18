@@ -1,0 +1,545 @@
+Analysis & Synthesis report for microProcessor
+Wed May 24 22:50:41 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |microProcessor|cpu:com_cpu|ctr:seq|etat_present
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: cpu:com_cpu|register_gen:BZ_reg
+ 14. Parameter Settings for User Entity Instance: cpu:com_cpu|register_gen:I_reg
+ 15. Parameter Settings for User Entity Instance: cpu:com_cpu|register_gen:ADDR_reg
+ 16. Parameter Settings for User Entity Instance: cpu:com_cpu|register_gen:ACC_reg
+ 17. Parameter Settings for Inferred Entity Instance: cpu:com_cpu|ual:alu|lpm_add_sub:Add0
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed May 24 22:50:41 2017           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; microProcessor                                  ;
+; Top-level Entity Name              ; microProcessor                                  ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 3,841                                           ;
+;     Total combinational functions  ; 1,781                                           ;
+;     Dedicated logic registers      ; 2,098                                           ;
+; Total registers                    ; 2098                                            ;
+; Total pins                         ; 3                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                      ; microProcessor     ; microProcessor     ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; ram.vhd                          ; yes             ; User VHDL File               ; C:/Users/Ghaith/Documents/VHDL/Vhdl/ram.vhd                               ;         ;
+; microProcessor.vhd               ; yes             ; User VHDL File               ; C:/Users/Ghaith/Documents/VHDL/Vhdl/microProcessor.vhd                    ;         ;
+; ual.vhd                          ; yes             ; User VHDL File               ; C:/Users/Ghaith/Documents/VHDL/Vhdl/ual.vhd                               ;         ;
+; cpu.vhd                          ; yes             ; User VHDL File               ; C:/Users/Ghaith/Documents/VHDL/Vhdl/cpu.vhd                               ;         ;
+; register_gen.vhd                 ; yes             ; User VHDL File               ; C:/Users/Ghaith/Documents/VHDL/Vhdl/register_gen.vhd                      ;         ;
+; register_inc.vhd                 ; yes             ; User VHDL File               ; C:/Users/Ghaith/Documents/VHDL/Vhdl/register_inc.vhd                      ;         ;
+; ctr.vhd                          ; yes             ; User VHDL File               ; C:/Users/Ghaith/Documents/VHDL/Vhdl/ctr.vhd                               ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
+; db/add_sub_rpi.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ghaith/Documents/VHDL/Vhdl/db/add_sub_rpi.tdf                    ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 3,841 ;
+;                                             ;       ;
+; Total combinational functions               ; 1781  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 1439  ;
+;     -- 3 input functions                    ; 313   ;
+;     -- <=2 input functions                  ; 29    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 1765  ;
+;     -- arithmetic mode                      ; 16    ;
+;                                             ;       ;
+; Total registers                             ; 2098  ;
+;     -- Dedicated logic registers            ; 2098  ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 3     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 2098  ;
+; Total fan-out                               ; 13091 ;
+; Average fan-out                             ; 3.37  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                   ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Library Name ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
+; |microProcessor                          ; 1781 (0)          ; 2098 (0)     ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |microProcessor                                                                 ; work         ;
+;    |cpu:com_cpu|                         ; 133 (16)          ; 50 (2)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |microProcessor|cpu:com_cpu                                                     ; work         ;
+;       |ctr:seq|                          ; 40 (40)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |microProcessor|cpu:com_cpu|ctr:seq                                             ; work         ;
+;       |register_gen:ACC_reg|             ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |microProcessor|cpu:com_cpu|register_gen:ACC_reg                                ; work         ;
+;       |register_gen:ADDR_reg|            ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |microProcessor|cpu:com_cpu|register_gen:ADDR_reg                               ; work         ;
+;       |register_gen:BZ_reg|              ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |microProcessor|cpu:com_cpu|register_gen:BZ_reg                                 ; work         ;
+;       |register_gen:I_reg|               ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |microProcessor|cpu:com_cpu|register_gen:I_reg                                  ; work         ;
+;       |register_inc:PC_reg|              ; 9 (9)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |microProcessor|cpu:com_cpu|register_inc:PC_reg                                 ; work         ;
+;       |ual:alu|                          ; 67 (49)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |microProcessor|cpu:com_cpu|ual:alu                                             ; work         ;
+;          |lpm_add_sub:Add0|              ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |microProcessor|cpu:com_cpu|ual:alu|lpm_add_sub:Add0                            ; work         ;
+;             |add_sub_rpi:auto_generated| ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |microProcessor|cpu:com_cpu|ual:alu|lpm_add_sub:Add0|add_sub_rpi:auto_generated ; work         ;
+;    |ram:mem|                             ; 1648 (1648)       ; 2048 (2048)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |microProcessor|ram:mem                                                         ; work         ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |microProcessor|cpu:com_cpu|ctr:seq|etat_present                                                                                                                                                                                                                                                                                                                                                 ;
++------------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+---------------------+---------------------+---------------------+--------------------+--------------------+
+; Name                   ; etat_present.exec_nop ; etat_present.exec_jnz ; etat_present.exec_jnc ; etat_present.exec_jmp ; etat_present.exec_out ; etat_present.exec_sta2 ; etat_present.exec_sta1 ; etat_present.exec_lda2 ; etat_present.exec_lda1 ; etat_present.exec_alu2 ; etat_present.exec_alu1 ; etat_present.inc_pc ; etat_present.decode ; etat_present.fetch2 ; etat_present.fetch ; etat_present.start ;
++------------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+---------------------+---------------------+---------------------+--------------------+--------------------+
+; etat_present.start     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                  ; 0                  ;
+; etat_present.fetch     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 1                  ; 1                  ;
+; etat_present.fetch2    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 1                   ; 0                  ; 1                  ;
+; etat_present.decode    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                   ; 1                   ; 0                   ; 0                  ; 1                  ;
+; etat_present.inc_pc    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 1                   ; 0                   ; 0                   ; 0                  ; 1                  ;
+; etat_present.exec_alu1 ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 1                      ; 0                   ; 0                   ; 0                   ; 0                  ; 1                  ;
+; etat_present.exec_alu2 ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                      ; 1                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                  ; 1                  ;
+; etat_present.exec_lda1 ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 1                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                  ; 1                  ;
+; etat_present.exec_lda2 ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 1                      ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                  ; 1                  ;
+; etat_present.exec_sta1 ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 1                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                  ; 1                  ;
+; etat_present.exec_sta2 ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 1                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                  ; 1                  ;
+; etat_present.exec_out  ; 0                     ; 0                     ; 0                     ; 0                     ; 1                     ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                  ; 1                  ;
+; etat_present.exec_jmp  ; 0                     ; 0                     ; 0                     ; 1                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                  ; 1                  ;
+; etat_present.exec_jnc  ; 0                     ; 0                     ; 1                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                  ; 1                  ;
+; etat_present.exec_jnz  ; 0                     ; 1                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                  ; 1                  ;
+; etat_present.exec_nop  ; 1                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                   ; 0                   ; 0                   ; 0                  ; 1                  ;
++------------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+---------------------+---------------------+---------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                         ;
++-----------------------------------------------------+------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal          ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------+------------------------+
+; cpu:com_cpu|ctr:seq|SEL_ADR                         ; cpu:com_cpu|ctr:seq|WideOr10 ; yes                    ;
+; cpu:com_cpu|ctr:seq|LOAD_BZ                         ; cpu:com_cpu|ctr:seq|WideOr6  ; yes                    ;
+; cpu:com_cpu|ctr:seq|wr                              ; cpu:com_cpu|ctr:seq|WideOr16 ; yes                    ;
+; cpu:com_cpu|ctr:seq|LOAD_PC                         ; cpu:com_cpu|ctr:seq|WideOr8  ; yes                    ;
+; cpu:com_cpu|ctr:seq|INC_CO                          ; cpu:com_cpu|ctr:seq|WideOr9  ; yes                    ;
+; cpu:com_cpu|ctr:seq|LOAD_AD                         ; cpu:com_cpu|ctr:seq|WideOr5  ; yes                    ;
+; cpu:com_cpu|ual:alu|temp_res[0]                     ; cpu:com_cpu|ctr:seq|Mux1     ; yes                    ;
+; cpu:com_cpu|ctr:seq|SEL_ACC                         ; cpu:com_cpu|ctr:seq|WideOr12 ; yes                    ;
+; cpu:com_cpu|ctr:seq|LOAD_ACC                        ; cpu:com_cpu|ctr:seq|WideOr13 ; yes                    ;
+; cpu:com_cpu|ual:alu|temp_res[4]                     ; cpu:com_cpu|ctr:seq|Mux1     ; yes                    ;
+; cpu:com_cpu|ctr:seq|LOAD_I                          ; cpu:com_cpu|ctr:seq|WideOr15 ; yes                    ;
+; cpu:com_cpu|ual:alu|temp_res[1]                     ; cpu:com_cpu|ctr:seq|Mux1     ; yes                    ;
+; cpu:com_cpu|ual:alu|temp_res[2]                     ; cpu:com_cpu|ctr:seq|Mux1     ; yes                    ;
+; cpu:com_cpu|ual:alu|temp_res[3]                     ; cpu:com_cpu|ctr:seq|Mux1     ; yes                    ;
+; cpu:com_cpu|ual:alu|temp_res[5]                     ; cpu:com_cpu|ctr:seq|Mux1     ; yes                    ;
+; cpu:com_cpu|ual:alu|temp_res[6]                     ; cpu:com_cpu|ctr:seq|Mux1     ; yes                    ;
+; cpu:com_cpu|ual:alu|temp_res[7]                     ; cpu:com_cpu|ctr:seq|Mux1     ; yes                    ;
+; cpu:com_cpu|ual:alu|temp_res[8]                     ; cpu:com_cpu|ctr:seq|Mux1     ; yes                    ;
+; Number of user-specified and inferred latches = 18  ;                              ;                        ;
++-----------------------------------------------------+------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                 ;
++-------------------------------------------+----------------------------------------+
+; Register name                             ; Reason for Removal                     ;
++-------------------------------------------+----------------------------------------+
+; cpu:com_cpu|ctr:seq|etat_present.exec_nop ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1     ;                                        ;
++-------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2098  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 48    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2080  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |microProcessor|cpu:com_cpu|register_inc:PC_reg|tmp[0] ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |microProcessor|cpu:com_cpu|ual:alu|Mux7               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:com_cpu|register_gen:BZ_reg ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; t              ; 1     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:com_cpu|register_gen:I_reg ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; t              ; 8     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:com_cpu|register_gen:ADDR_reg ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; t              ; 8     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:com_cpu|register_gen:ACC_reg ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; t              ; 8     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cpu:com_cpu|ual:alu|lpm_add_sub:Add0 ;
++------------------------+-------------+------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                           ;
++------------------------+-------------+------------------------------------------------+
+; LPM_WIDTH              ; 9           ; Untyped                                        ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                        ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                        ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                        ;
+; LPM_PIPELINE           ; 0           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                        ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                        ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                        ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                             ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                        ;
+; USE_WYS                ; OFF         ; Untyped                                        ;
+; STYLE                  ; FAST        ; Untyped                                        ;
+; CBXI_PARAMETER         ; add_sub_rpi ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                 ;
++------------------------+-------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed May 24 22:50:35 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off microProcessor -c microProcessor
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
+    Info (12022): Found design unit 1: ram-ram_arch
+    Info (12023): Found entity 1: ram
+Info (12021): Found 2 design units, including 1 entities, in source file microprocessor.vhd
+    Info (12022): Found design unit 1: microProcessor-microProcessor_arch
+    Info (12023): Found entity 1: microProcessor
+Info (12021): Found 2 design units, including 1 entities, in source file ual.vhd
+    Info (12022): Found design unit 1: ual-arch_ual
+    Info (12023): Found entity 1: ual
+Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
+    Info (12022): Found design unit 1: cpu-cpu_arch
+    Info (12023): Found entity 1: cpu
+Info (12021): Found 2 design units, including 1 entities, in source file register_gen.vhd
+    Info (12022): Found design unit 1: register_gen-register_gen_arch
+    Info (12023): Found entity 1: register_gen
+Info (12021): Found 2 design units, including 1 entities, in source file register_inc.vhd
+    Info (12022): Found design unit 1: register_inc-register_inc_arch
+    Info (12023): Found entity 1: register_inc
+Info (12021): Found 2 design units, including 1 entities, in source file ctr.vhd
+    Info (12022): Found design unit 1: ctr-ctr_arch
+    Info (12023): Found entity 1: ctr
+Info (12021): Found 3 design units, including 1 entities, in source file tb_ual.vhd
+    Info (12022): Found design unit 1: tb_ual-tb
+    Info (12022): Found design unit 2: cfg_tb_ual
+    Info (12023): Found entity 1: tb_ual
+Info (12127): Elaborating entity "microProcessor" for the top level hierarchy
+Info (12128): Elaborating entity "cpu" for hierarchy "cpu:com_cpu"
+Info (10041): Inferred latch for "ACC_ADR[0]" at cpu.vhd(60)
+Info (10041): Inferred latch for "ACC_ADR[1]" at cpu.vhd(60)
+Info (10041): Inferred latch for "ACC_ADR[2]" at cpu.vhd(60)
+Info (10041): Inferred latch for "ACC_ADR[3]" at cpu.vhd(60)
+Info (10041): Inferred latch for "ACC_ADR[4]" at cpu.vhd(60)
+Info (10041): Inferred latch for "ACC_ADR[5]" at cpu.vhd(60)
+Info (10041): Inferred latch for "ACC_ADR[6]" at cpu.vhd(60)
+Info (10041): Inferred latch for "ACC_ADR[7]" at cpu.vhd(60)
+Info (12128): Elaborating entity "register_gen" for hierarchy "cpu:com_cpu|register_gen:BZ_reg"
+Info (12128): Elaborating entity "ctr" for hierarchy "cpu:com_cpu|ctr:seq"
+Warning (10492): VHDL Process Statement warning at ctr.vhd(91): signal "C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ctr.vhd(98): signal "Z" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ctr.vhd(140): inferring latch(es) for signal or variable "LOAD_AD", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ctr.vhd(140): inferring latch(es) for signal or variable "LOAD_BZ", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ctr.vhd(140): inferring latch(es) for signal or variable "LOAD_PC", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ctr.vhd(140): inferring latch(es) for signal or variable "INC_CO", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ctr.vhd(140): inferring latch(es) for signal or variable "SEL_ADR", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ctr.vhd(140): inferring latch(es) for signal or variable "SEL_ACC", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ctr.vhd(140): inferring latch(es) for signal or variable "LOAD_ACC", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ctr.vhd(140): inferring latch(es) for signal or variable "LOAD_I", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ctr.vhd(140): inferring latch(es) for signal or variable "wr", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "wr" at ctr.vhd(140)
+Info (10041): Inferred latch for "LOAD_I" at ctr.vhd(140)
+Info (10041): Inferred latch for "LOAD_ACC" at ctr.vhd(140)
+Info (10041): Inferred latch for "SEL_ACC" at ctr.vhd(140)
+Info (10041): Inferred latch for "SEL_ADR" at ctr.vhd(140)
+Info (10041): Inferred latch for "INC_CO" at ctr.vhd(140)
+Info (10041): Inferred latch for "LOAD_PC" at ctr.vhd(140)
+Info (10041): Inferred latch for "LOAD_BZ" at ctr.vhd(140)
+Info (10041): Inferred latch for "LOAD_AD" at ctr.vhd(140)
+Info (12128): Elaborating entity "register_gen" for hierarchy "cpu:com_cpu|register_gen:I_reg"
+Info (12128): Elaborating entity "register_inc" for hierarchy "cpu:com_cpu|register_inc:PC_reg"
+Info (12128): Elaborating entity "ual" for hierarchy "cpu:com_cpu|ual:alu"
+Warning (10631): VHDL Process Statement warning at ual.vhd(18): inferring latch(es) for signal or variable "temp_res", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "temp_res[0]" at ual.vhd(18)
+Info (10041): Inferred latch for "temp_res[1]" at ual.vhd(18)
+Info (10041): Inferred latch for "temp_res[2]" at ual.vhd(18)
+Info (10041): Inferred latch for "temp_res[3]" at ual.vhd(18)
+Info (10041): Inferred latch for "temp_res[4]" at ual.vhd(18)
+Info (10041): Inferred latch for "temp_res[5]" at ual.vhd(18)
+Info (10041): Inferred latch for "temp_res[6]" at ual.vhd(18)
+Info (10041): Inferred latch for "temp_res[7]" at ual.vhd(18)
+Info (10041): Inferred latch for "temp_res[8]" at ual.vhd(18)
+Info (12128): Elaborating entity "ram" for hierarchy "ram:mem"
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "ram:mem|mem" is uninferred due to asynchronous read logic
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "cpu:com_cpu|ual:alu|Add0"
+Info (12130): Elaborated megafunction instantiation "cpu:com_cpu|ual:alu|lpm_add_sub:Add0"
+Info (12133): Instantiated megafunction "cpu:com_cpu|ual:alu|lpm_add_sub:Add0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "9"
+    Info (12134): Parameter "LPM_DIRECTION" = "DEFAULT"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_rpi.tdf
+    Info (12023): Found entity 1: add_sub_rpi
+Warning (13012): Latch cpu:com_cpu|ctr:seq|SEL_ADR has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|ctr:seq|etat_present.exec_alu1
+Warning (13012): Latch cpu:com_cpu|ctr:seq|LOAD_BZ has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|ctr:seq|etat_present.exec_out
+Warning (13012): Latch cpu:com_cpu|ctr:seq|wr has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|ctr:seq|etat_present.exec_sta2
+Warning (13012): Latch cpu:com_cpu|ctr:seq|LOAD_PC has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|ctr:seq|etat_present.exec_jmp
+Warning (13012): Latch cpu:com_cpu|ctr:seq|INC_CO has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|ctr:seq|etat_present.fetch
+Warning (13012): Latch cpu:com_cpu|ctr:seq|LOAD_AD has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|ctr:seq|etat_present.fetch2
+Warning (13012): Latch cpu:com_cpu|ual:alu|temp_res[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|register_gen:I_reg|o[0]
+Warning (13012): Latch cpu:com_cpu|ctr:seq|SEL_ACC has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|ctr:seq|etat_present.exec_lda2
+Warning (13012): Latch cpu:com_cpu|ctr:seq|LOAD_ACC has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|ctr:seq|etat_present.exec_alu2
+Warning (13012): Latch cpu:com_cpu|ual:alu|temp_res[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|register_gen:I_reg|o[0]
+Warning (13012): Latch cpu:com_cpu|ctr:seq|LOAD_I has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|ctr:seq|etat_present.fetch
+Warning (13012): Latch cpu:com_cpu|ual:alu|temp_res[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|register_gen:I_reg|o[0]
+Warning (13012): Latch cpu:com_cpu|ual:alu|temp_res[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|register_gen:I_reg|o[0]
+Warning (13012): Latch cpu:com_cpu|ual:alu|temp_res[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|register_gen:I_reg|o[0]
+Warning (13012): Latch cpu:com_cpu|ual:alu|temp_res[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|register_gen:I_reg|o[0]
+Warning (13012): Latch cpu:com_cpu|ual:alu|temp_res[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|register_gen:I_reg|o[0]
+Warning (13012): Latch cpu:com_cpu|ual:alu|temp_res[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|register_gen:I_reg|o[0]
+Warning (13012): Latch cpu:com_cpu|ual:alu|temp_res[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:com_cpu|register_gen:I_reg|o[3]
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 3854 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 3851 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 49 warnings
+    Info: Peak virtual memory: 554 megabytes
+    Info: Processing ended: Wed May 24 22:50:41 2017
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
+
+

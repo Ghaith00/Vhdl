@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all ;
+entity cpu is port(
+	clk , reset: in std_logic;
+	D: in std_logic_vector(7 downto 0);
+	ADR , A : out std_logic_vector(7 downto 0);
+	wr , BZ : out std_logic
+	);
+end entity;
+architecture cpu_arch of cpu is
+
+begin
+	
+		
+end architecture;

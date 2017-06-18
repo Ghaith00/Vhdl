@@ -1,0 +1,264 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Ghaith\Documents\VHDL\Vhdl\simulation\modelsim
+Ecpu
+Z1 w1495658209
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Ghaith\Documents\VHDL\Vhdl\simulation\modelsim
+Z6 8C:/Users/Ghaith/Documents/VHDL/Vhdl/cpu.vhd
+Z7 FC:/Users/Ghaith/Documents/VHDL/Vhdl/cpu.vhd
+l0
+L4
+VW_iFYdJTLjBKN]3`^Wi>:2
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1495662704.398000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ghaith/Documents/VHDL/Vhdl/cpu.vhd|
+Z11 !s107 C:/Users/Ghaith/Documents/VHDL/Vhdl/cpu.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 [kW:Fez;c:HOV5P6@kBGl0
+!i10b 1
+Acpu_arch
+R2
+R3
+R4
+DEx4 work 3 cpu 0 22 W_iFYdJTLjBKN]3`^Wi>:2
+l46
+L11
+VbU<CbU[nl[EER5@>4QLU<2
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 ]<gB<aB0Uk25`ik5Pa9PQ2
+!i10b 1
+Ectr
+Z14 w1495660353
+R2
+R3
+R4
+R5
+Z15 8C:/Users/Ghaith/Documents/VHDL/Vhdl/ctr.vhd
+Z16 FC:/Users/Ghaith/Documents/VHDL/Vhdl/ctr.vhd
+l0
+L4
+VnB<BYhSB^nKEC@5bR[ISJ3
+!s100 keQ<Dk2QhiTm_IXYSGaT^0
+R8
+31
+!i10b 1
+Z17 !s108 1495662705.246000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ghaith/Documents/VHDL/Vhdl/ctr.vhd|
+Z19 !s107 C:/Users/Ghaith/Documents/VHDL/Vhdl/ctr.vhd|
+R12
+R13
+Actr_arch
+R2
+R3
+R4
+DEx4 work 3 ctr 0 22 nB<BYhSB^nKEC@5bR[ISJ3
+l54
+L11
+VKHMcOQPJAk1>lmT?2eIen2
+!s100 cdh0lc@O5b`HJ1>Cl;X[U2
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13
+Emicroprocessor
+Z20 w1495583613
+R2
+R3
+R4
+R5
+Z21 8C:/Users/Ghaith/Documents/VHDL/Vhdl/microProcessor.vhd
+Z22 FC:/Users/Ghaith/Documents/VHDL/Vhdl/microProcessor.vhd
+l0
+L4
+V9W8C_Xa1=ZInC8=G6]NPb0
+R8
+31
+Z23 !s108 1495662703.945000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ghaith/Documents/VHDL/Vhdl/microProcessor.vhd|
+Z25 !s107 C:/Users/Ghaith/Documents/VHDL/Vhdl/microProcessor.vhd|
+R12
+R13
+!s100 zb2BT9JHC=1h]7zfDg@dP1
+!i10b 1
+Amicroprocessor_arch
+R2
+R3
+R4
+DEx4 work 14 microprocessor 0 22 9W8C_Xa1=ZInC8=G6]NPb0
+l25
+L9
+VCzz=2ZdB?R0M]^^dPUBLR2
+R8
+31
+R23
+R24
+R25
+R12
+R13
+!s100 EGGS0;?C7?_SJW[L`F28@1
+!i10b 1
+Eram
+Z26 w1495581211
+R2
+R3
+R4
+R5
+Z27 8C:/Users/Ghaith/Documents/VHDL/Vhdl/ram.vhd
+Z28 FC:/Users/Ghaith/Documents/VHDL/Vhdl/ram.vhd
+l0
+L4
+V:_g@XhL^k:>@O`Pbio2E[3
+R8
+31
+Z29 !s108 1495662703.218000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ghaith/Documents/VHDL/Vhdl/ram.vhd|
+Z31 !s107 C:/Users/Ghaith/Documents/VHDL/Vhdl/ram.vhd|
+R12
+R13
+!s100 b<YQg6ak=OOBOoGnC@JZO1
+!i10b 1
+Aram_arch
+R2
+R3
+R4
+DEx4 work 3 ram 0 22 :_g@XhL^k:>@O`Pbio2E[3
+l13
+L10
+VMlj=>?UeLb?]Z^ig:75523
+R8
+31
+R29
+R30
+R31
+R12
+R13
+!s100 nUSEjC5VFd]^03XC0WT;<2
+!i10b 1
+Eregister_gen
+Z32 w1495584200
+R2
+R3
+R4
+R5
+Z33 8C:/Users/Ghaith/Documents/VHDL/Vhdl/register_gen.vhd
+Z34 FC:/Users/Ghaith/Documents/VHDL/Vhdl/register_gen.vhd
+l0
+L4
+VN>lll`[]O^2`i<PVNb>of0
+R8
+31
+Z35 !s108 1495662704.736000
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ghaith/Documents/VHDL/Vhdl/register_gen.vhd|
+Z37 !s107 C:/Users/Ghaith/Documents/VHDL/Vhdl/register_gen.vhd|
+R12
+R13
+!s100 WYLJBEafM7faUUdTV@Ldn3
+!i10b 1
+Aregister_gen_arch
+R2
+R3
+R4
+DEx4 work 12 register_gen 0 22 N>lll`[]O^2`i<PVNb>of0
+l14
+L12
+VARWYZLEd1i>>O77DH3i:i0
+R8
+31
+R35
+R36
+R37
+R12
+R13
+!s100 EJ`S2H8f^PV?]ICN4R16S2
+!i10b 1
+Eregister_inc
+Z38 w1495584551
+R2
+R3
+R4
+R5
+Z39 8C:/Users/Ghaith/Documents/VHDL/Vhdl/register_inc.vhd
+Z40 FC:/Users/Ghaith/Documents/VHDL/Vhdl/register_inc.vhd
+l0
+L4
+VODYi9SVdWGR4f89YGQdV?3
+R8
+31
+Z41 !s108 1495662704.989000
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ghaith/Documents/VHDL/Vhdl/register_inc.vhd|
+Z43 !s107 C:/Users/Ghaith/Documents/VHDL/Vhdl/register_inc.vhd|
+R12
+R13
+!s100 PSUjm`gD;OV9o2Hk1AHFP3
+!i10b 1
+Aregister_inc_arch
+R2
+R3
+R4
+DEx4 work 12 register_inc 0 22 ODYi9SVdWGR4f89YGQdV?3
+l13
+L11
+Vo@eS?_5682fYPzEPZPJk42
+R8
+31
+R41
+R42
+R43
+R12
+R13
+!s100 ^9S48iO@b<Lkc3l[G7R?<1
+!i10b 1
+Eual
+Z44 w1495610472
+R2
+R3
+R4
+R5
+Z45 8C:/Users/Ghaith/Documents/VHDL/Vhdl/ual.vhd
+Z46 FC:/Users/Ghaith/Documents/VHDL/Vhdl/ual.vhd
+l0
+L4
+V2SF;jiZ4M?;;J3d1<1R2G0
+R8
+31
+Z47 !s108 1495662704.221000
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ghaith/Documents/VHDL/Vhdl/ual.vhd|
+Z49 !s107 C:/Users/Ghaith/Documents/VHDL/Vhdl/ual.vhd|
+R12
+R13
+!s100 eE8_`Wbaa2B2XYoRBW]Nk1
+!i10b 1
+Aarch_ual
+R2
+R3
+R4
+DEx4 work 3 ual 0 22 2SF;jiZ4M?;;J3d1<1R2G0
+l15
+L12
+V3E394LL90SLjd19HClO4_1
+R8
+31
+R47
+R48
+R49
+R12
+R13
+!s100 EAaNHi?>o8CN_6Cz?XX=90
+!i10b 1

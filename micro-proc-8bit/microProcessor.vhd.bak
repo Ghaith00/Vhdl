@@ -1,0 +1,14 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all ;
+entity microProcessor is port(
+	clk , wr: in std_logic;
+	ADR , A : in std_logic_vector(7 downto 0);
+	D : out std_logic_vector(7 downto 0)
+	);
+end entity;
+architecture microProcessor_arch of microProcessor is
+begin
+	
+		
+end architecture;

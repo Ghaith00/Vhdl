@@ -1,0 +1,245 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'cpu:com_cpu|register_gen:I_reg|o[0]'
+Slack : -14.272
+TNS   : -123.374
+
+Type  : Slow Model Setup 'clk'
+Slack : -11.886
+TNS   : -16072.030
+
+Type  : Slow Model Setup 'cpu:com_cpu|ctr:seq|etat_present.decode'
+Slack : -4.088
+TNS   : -7.359
+
+Type  : Slow Model Setup 'cpu:com_cpu|ctr:seq|etat_present.fetch'
+Slack : -3.636
+TNS   : -7.102
+
+Type  : Slow Model Setup 'cpu:com_cpu|ctr:seq|etat_present.exec_alu1'
+Slack : -2.301
+TNS   : -2.301
+
+Type  : Slow Model Setup 'cpu:com_cpu|ctr:seq|etat_present.exec_lda2'
+Slack : -0.825
+TNS   : -1.240
+
+Type  : Slow Model Setup 'cpu:com_cpu|ctr:seq|etat_present.exec_alu2'
+Slack : -0.408
+TNS   : -0.408
+
+Type  : Slow Model Setup 'cpu:com_cpu|ctr:seq|etat_present.exec_sta2'
+Slack : -0.073
+TNS   : -0.073
+
+Type  : Slow Model Setup 'cpu:com_cpu|ctr:seq|etat_present.exec_out'
+Slack : -0.032
+TNS   : -0.032
+
+Type  : Slow Model Setup 'cpu:com_cpu|ctr:seq|etat_present.exec_jmp'
+Slack : 0.551
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk'
+Slack : -2.912
+TNS   : -16.738
+
+Type  : Slow Model Hold 'cpu:com_cpu|register_gen:I_reg|o[0]'
+Slack : -2.026
+TNS   : -15.414
+
+Type  : Slow Model Hold 'cpu:com_cpu|ctr:seq|etat_present.exec_alu1'
+Slack : -1.949
+TNS   : -1.949
+
+Type  : Slow Model Hold 'cpu:com_cpu|ctr:seq|etat_present.exec_jmp'
+Slack : -1.239
+TNS   : -1.239
+
+Type  : Slow Model Hold 'cpu:com_cpu|ctr:seq|etat_present.fetch'
+Slack : -0.637
+TNS   : -1.124
+
+Type  : Slow Model Hold 'cpu:com_cpu|ctr:seq|etat_present.exec_sta2'
+Slack : -0.620
+TNS   : -0.620
+
+Type  : Slow Model Hold 'cpu:com_cpu|ctr:seq|etat_present.exec_out'
+Slack : -0.608
+TNS   : -0.608
+
+Type  : Slow Model Hold 'cpu:com_cpu|ctr:seq|etat_present.exec_alu2'
+Slack : -0.428
+TNS   : -0.428
+
+Type  : Slow Model Hold 'cpu:com_cpu|ctr:seq|etat_present.exec_lda2'
+Slack : -0.127
+TNS   : -0.138
+
+Type  : Slow Model Hold 'cpu:com_cpu|ctr:seq|etat_present.decode'
+Slack : -0.015
+TNS   : -0.015
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.631
+TNS   : -2565.387
+
+Type  : Slow Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.decode'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.exec_alu1'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.exec_alu2'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.exec_jmp'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.exec_lda2'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.exec_out'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.exec_sta2'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.fetch'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'cpu:com_cpu|register_gen:I_reg|o[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'cpu:com_cpu|register_gen:I_reg|o[0]'
+Slack : -5.155
+TNS   : -44.315
+
+Type  : Fast Model Setup 'clk'
+Slack : -3.644
+TNS   : -4516.294
+
+Type  : Fast Model Setup 'cpu:com_cpu|ctr:seq|etat_present.decode'
+Slack : -1.581
+TNS   : -2.865
+
+Type  : Fast Model Setup 'cpu:com_cpu|ctr:seq|etat_present.fetch'
+Slack : -1.420
+TNS   : -2.787
+
+Type  : Fast Model Setup 'cpu:com_cpu|ctr:seq|etat_present.exec_alu1'
+Slack : -0.919
+TNS   : -0.919
+
+Type  : Fast Model Setup 'cpu:com_cpu|ctr:seq|etat_present.exec_lda2'
+Slack : 0.086
+TNS   : 0.000
+
+Type  : Fast Model Setup 'cpu:com_cpu|ctr:seq|etat_present.exec_alu2'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast Model Setup 'cpu:com_cpu|ctr:seq|etat_present.exec_sta2'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Fast Model Setup 'cpu:com_cpu|ctr:seq|etat_present.exec_out'
+Slack : 0.320
+TNS   : 0.000
+
+Type  : Fast Model Setup 'cpu:com_cpu|ctr:seq|etat_present.exec_jmp'
+Slack : 0.523
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.448
+TNS   : -19.743
+
+Type  : Fast Model Hold 'cpu:com_cpu|register_gen:I_reg|o[0]'
+Slack : -1.373
+TNS   : -11.174
+
+Type  : Fast Model Hold 'cpu:com_cpu|ctr:seq|etat_present.exec_alu1'
+Slack : -0.713
+TNS   : -0.713
+
+Type  : Fast Model Hold 'cpu:com_cpu|ctr:seq|etat_present.exec_jmp'
+Slack : -0.430
+TNS   : -0.430
+
+Type  : Fast Model Hold 'cpu:com_cpu|ctr:seq|etat_present.exec_sta2'
+Slack : -0.215
+TNS   : -0.215
+
+Type  : Fast Model Hold 'cpu:com_cpu|ctr:seq|etat_present.exec_out'
+Slack : -0.208
+TNS   : -0.208
+
+Type  : Fast Model Hold 'cpu:com_cpu|ctr:seq|etat_present.fetch'
+Slack : -0.199
+TNS   : -0.355
+
+Type  : Fast Model Hold 'cpu:com_cpu|ctr:seq|etat_present.exec_alu2'
+Slack : -0.160
+TNS   : -0.160
+
+Type  : Fast Model Hold 'cpu:com_cpu|ctr:seq|etat_present.exec_lda2'
+Slack : -0.049
+TNS   : -0.092
+
+Type  : Fast Model Hold 'cpu:com_cpu|ctr:seq|etat_present.decode'
+Slack : 0.015
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -2099.380
+
+Type  : Fast Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.decode'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.exec_alu1'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.exec_alu2'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.exec_jmp'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.exec_lda2'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.exec_out'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.exec_sta2'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'cpu:com_cpu|ctr:seq|etat_present.fetch'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'cpu:com_cpu|register_gen:I_reg|o[0]'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

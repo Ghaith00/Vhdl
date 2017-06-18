@@ -1,0 +1,19 @@
+
+State Machine - |microProcessor|cpu:com_cpu|ctr:seq|etat_present
+Name etat_present.exec_nop etat_present.exec_jnz etat_present.exec_jnc etat_present.exec_jmp etat_present.exec_out etat_present.exec_sta2 etat_present.exec_sta1 etat_present.exec_lda2 etat_present.exec_lda1 etat_present.exec_alu2 etat_present.exec_alu1 etat_present.inc_pc etat_present.decode etat_present.fetch2 etat_present.fetch etat_present.start 
+etat_present.start 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+etat_present.fetch 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+etat_present.fetch2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+etat_present.decode 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+etat_present.inc_pc 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+etat_present.exec_alu1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+etat_present.exec_alu2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+etat_present.exec_lda1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+etat_present.exec_lda2 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+etat_present.exec_sta1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+etat_present.exec_sta2 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+etat_present.exec_out 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+etat_present.exec_jmp 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+etat_present.exec_jnc 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+etat_present.exec_jnz 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+etat_present.exec_nop 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
